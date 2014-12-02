@@ -1,17 +1,20 @@
 #!/bin/bash
 dotrepo="${HOME}/.dotfiles"
 
-if git clone git@github.com:thundernode/dotfiles.git $dotrepo ; then
-  echo "Cloned into ${dotrepo}"
-elif git clone https://github.com/thundernode/dotfiles.git $dotrepo ; then
-  echo -e "\e[31mFailed to clone via ssh.\e[0m Cloned via https instead."
+if [ ! -e $dotrepo ]; then
+  if git clone --recursive git@github.com:thundernode/dotfiles.git $dotrepo ; then
+    echo "Cloned into ${dotrepo}"
+  elif git clone --recursive https://github.com/thundernode/dotfiles.git $dotrepo ; then
+    echo -e "\e[31mFailed to clone via ssh.\e[0m Cloned via https instead."
+  else
+    echo -e "\e[31mFailed to clone.\e[0m" && exit 1
+  fi
 else
-  echo -e "\e[31mFailed to clone.\e[0m" && exit 1
+  cd $dotrepo
+  git pull
+  git submodule update --init --recursive
 fi
 
-cd $dotrepo
-git submodule init
-git submodule update
 
 dotfiles=`find $dotrepo -maxdepth 1 -type f \( ! -iname ".git*" \) -printf "%f\n"`
 dotfolders=`find $dotrepo -maxdepth 1 -type d \( ! -iname ".git*" ! -iname "." ! -iname ".dotfiles" \) -printf "%f\n"`
