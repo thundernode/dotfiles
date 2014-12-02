@@ -1,0 +1,24 @@
+[submodule ".vimmodules/vim-gitgutter"]
+	path = .vimmodules/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vimmodules/vim-airline"]
+	path = .vimmodules/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vimmodules/vim-vividchalk"]
+	path = .vimmodules/vim-vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
+[submodule ".vimmodules/vim-pathogen"]
+	path = .vimmodules/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule ".vimmodules/vim-eunuch"]
+	path = .vimmodules/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule ".vimmodules/vim-fugitive"]
+	path = .vimmodules/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vimmodules/vim-syntastic"]
+	path = .vimmodules/vim-syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vimmodules/vim-gnupg"]
+	path = .vimmodules/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git

@@ -1,0 +1,5 @@
+.ssh/id_*
+.ssh/known_hosts
+.bash_history
+.bash_profile
+.gitconfig
