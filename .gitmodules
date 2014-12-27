@@ -22,3 +22,18 @@
 [submodule ".vimmodules/vim-gnupg"]
 	path = .vimmodules/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
+[submodule ".vimmodules/vim-supertab"]
+	path = .vimmodules/vim-supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule ".vimmodules/vim-snippets"]
+	path = .vimmodules/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule ".vimmodules/vim-tlib"]
+	path = .vimmodules/vim-tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vimmodules/vim-addon-mw-utils"]
+	path = .vimmodules/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vimmodules/vim-snipmate"]
+	path = .vimmodules/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
