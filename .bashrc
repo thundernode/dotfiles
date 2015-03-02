@@ -111,9 +111,15 @@ function parse_git_branch () {
      }
 
 RED="\[\033[0;31m\]"
+BOLDRED="\[\033[1;31m\]"
 YELLOW="\[\033[0;33m\]"
+BOLDYELLOW="\[\033[1;33m\]"
 GREEN="\[\033[0;32m\]"
+BOLDGREEN="\[\033[1;32m\]"
+CYAN="\[\033[0;36m\]"
+BOLDCYAN="\[\033[1;36m\]"
 NO_COLOUR="\[\033[0m\]"
 
-PS1="$NO_COLOUR\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w$RED\$(parse_git_branch)$NO_COLOUR\$ "
-PATH=~/.rvm/bin:~/bin:~/bin/local:/sbin:"${PATH}"
+PATH="~/bin:~/bin/local:/sbin:${PATH}"
+PS1="$BOLDGREEN\u$BOLDCYAN@$BOLDGREEN\h$BOLDYELLOW:$BOLDCYAN\w$BOLDRED\$(parse_git_branch)$NO_COLOUR\$ "
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM functions and adds RVM to PATH if it exists
