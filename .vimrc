@@ -18,6 +18,8 @@ set shiftwidth=2                  " an auto indent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+set undofile                      " use persistant undo history
+set undodir=~/.vimundo/           " Directory to store the undo history
 if exists('+colorcolumn')
   nnoremap <leader>c :set colorcolumn=80<CR> "sets a column to show width of 80
 endif
