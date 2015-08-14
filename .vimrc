@@ -51,7 +51,17 @@ let g:airline#extensions#whitespace#enabled = 0 " Speed up loading large files
 let g:airline#extensions#tagbar#enabled = 0     " Speed up loading large files
 let g:airline#extensions#disable_rtp_load = 1   " Speed up loading large files
 
-au Filetype yaml setlocal foldmethod=indent | nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR> | vnoremap <Space> zf
+if has("autocmd")
+  " Drupal *.module and *.install files.
+  augroup module
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+endif
 
 "Automatically set paste mode for pasting
 "taken from https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
