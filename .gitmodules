@@ -24,10 +24,10 @@
 	url = https://github.com/jamessan/vim-gnupg.git
 [submodule ".vimmodules/vim-supertab"]
 	path = .vimmodules/vim-supertab
-	url = git@github.com:ervandew/supertab.git
+	url = https://github.com/ervandew/supertab.git
 [submodule ".vimmodules/vim-snippets"]
 	path = .vimmodules/vim-snippets
-	url = git@github.com:honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule ".vimmodules/vim-tlib"]
 	path = .vimmodules/vim-tlib
 	url = https://github.com/tomtom/tlib_vim.git
