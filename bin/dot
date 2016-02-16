@@ -1,0 +1,41 @@
+#!/bin/bash
+dotrepo="git@github.com:thundernode/dotfiles.git"
+dotfolder="${HOME}/.dotfiles"
+gitcommand="/usr/bin/git --git-dir=${dotfolder} --work-tree=$HOME"
+if [ "$1" != "init" ] && [ ! -e $dotfolder ]; then
+  echo "You must first run \"$(basename -- "$0")\" init"
+  exit 1
+fi
+
+unset GIT_DIR
+cd $HOME
+
+case $1 in
+  "")
+    $gitcommand pull
+    source ${HOME}/.bashrc
+    ;;
+    #This has too much potential to harm files unrelated to the dotfiles
+    clean)
+    echo "This function has been disabled"
+    ;;
+  commit)
+    $gitcommand commit $2 "$3"
+    ;;
+    #This overwrites the normal git init behaviour as it would be useless in this setup
+    init)
+    if [ ! -e $dotfolder ]; then
+      git clone --bare $dotrepo $dotfolder
+      $gitcommand config status.showUntrackedFiles no
+      $gitcommand reset --quiet --mixed HEAD
+      $gitcommand submodule update --init
+      source ${HOME}/.bashrc
+    else
+      echo "${dotfolder} already present"
+    fi
+    ;;
+    #Simply pass all command arguments directly to the gitcommand
+    *)
+    $gitcommand $@
+    ;;
+esac

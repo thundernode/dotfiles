@@ -46,7 +46,7 @@ set lazyredraw
 set timeout timeoutlen=3000 ttimeoutlen=50	" eliminates lag when switching from insert to normal
 set laststatus=2				" airline will not appear without this
 let g:airline#extensions#tabline#enabled = 1	" Enables Tab Bar at the top of the file
-let g:airline_theme='badwolf'			" Enables badwolf theme
+let g:airline_theme='dark'			" Enables dark theme
 let g:airline#extensions#whitespace#enabled = 0 " Speed up loading large files
 let g:airline#extensions#tagbar#enabled = 0     " Speed up loading large files
 let g:airline#extensions#disable_rtp_load = 1   " Speed up loading large files
