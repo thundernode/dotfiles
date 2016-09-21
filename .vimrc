@@ -6,12 +6,12 @@ execute pathogen#infect('~/.vimmodules/{}')
 syntax on
 filetype plugin indent on
 set number                        " show line numbers
-set listchars=tab:>·,trail:·      " but only show tabs and trailing whitespace
-set list                          " show invisible characters
-color vividchalk
 set encoding=utf-8                " Set default encoding to UTF-8
 scriptencoding utf-8
 set fileencoding=utf-8
+set listchars=tab:>·,trail:·      " but only show tabs and trailing whitespace
+set list                          " show invisible characters
+color vividchalk
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an auto indent (with <<) is two spaces
