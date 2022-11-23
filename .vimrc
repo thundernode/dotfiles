@@ -51,6 +51,9 @@ let g:airline#extensions#whitespace#enabled = 0 " Speed up loading large files
 let g:airline#extensions#tagbar#enabled = 0     " Speed up loading large files
 let g:airline#extensions#disable_rtp_load = 1   " Speed up loading large files
 
+"Snipmate
+let g:snipMate = { 'snippet_version' : 1 }
+
 if has("autocmd")
   " Drupal *.module and *.install files.
   augroup module
