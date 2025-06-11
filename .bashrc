@@ -69,7 +69,6 @@ NO_COLOUR="\[\033[0m\]"
 
 PATH="~/bin:~/bin/local:/sbin:${PATH}"
 PS1="$BOLDGREEN\u$BOLDCYAN@$BOLDGREEN\h$BOLDYELLOW:$BOLDCYAN\w$BOLDRED\$(parse_git_branch)$NO_COLOUR\$ "
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM functions and adds RVM to PATH if it exists
 
 # Load all additional configs
 for config in "$HOME"/.bashrc.d/*.bash ; do
