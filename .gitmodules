@@ -37,3 +37,6 @@
 [submodule ".vimmodules/supertab"]
 	path = .vimmodules/vim-supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule ".vimmodules/vim-syntastic"]
+	path = .vimmodules/vim-syntastic
+	url = https://github.com/scrooloose/syntastic.git
